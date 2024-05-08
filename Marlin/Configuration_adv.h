@@ -2614,9 +2614,9 @@
 #if ENABLED(LIN_ADVANCE)
 #if ENABLED(DISTINCT_E_FACTORS)
 #define ADVANCE_K                                                              \
-  { 0.22 } // (mm) Compression length per 1mm/s extruder speed, per extruder
+  { 0.02 } // (mm) Compression length per 1mm/s extruder speed, per extruder
 #else
-#define ADVANCE_K 0.22 // (mm) Compression length applying to all extruders
+#define ADVANCE_K 0.02 // (mm) Compression length applying to all extruders
 #endif
 // #define ADVANCE_K_EXTRA       // Add a second linear advance constant,
 // configurable with M900 L. #define LA_DEBUG              // Print debug
@@ -2941,7 +2941,7 @@
 // Without XON/XOFF flow control (see SERIAL_XON_XOFF below) 32 bytes should be
 // enough. To use flow control, set this buffer size to at least 1024 bytes.
 // :[0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048]
-#define RX_BUFFER_SIZE 2048
+// #define RX_BUFFER_SIZE 2048
 
 #if RX_BUFFER_SIZE >= 1024
 // Enable to have the controller send XON/XOFF control characters to
@@ -3734,7 +3734,7 @@
 #define X2_HYBRID_THRESHOLD 100
 #define Y_HYBRID_THRESHOLD 200
 #define Y2_HYBRID_THRESHOLD 100
-#define Z_HYBRID_THRESHOLD 15
+#define Z_HYBRID_THRESHOLD 10
 #define Z2_HYBRID_THRESHOLD 3
 #define Z3_HYBRID_THRESHOLD 3
 #define Z4_HYBRID_THRESHOLD 3

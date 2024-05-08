@@ -773,9 +773,9 @@
 #define DEFAULT_Kd_LIST                                                        \
   { 114.00, 114.00 }
 #else
-#define DEFAULT_Kp 9.57
-#define DEFAULT_Ki 0.57
-#define DEFAULT_Kd 40.43
+#define DEFAULT_Kp 10.57
+#define DEFAULT_Ki 0.71
+#define DEFAULT_Kd 39.44
 #endif
 #else
 #define BANG_MAX                                                               \
@@ -897,9 +897,9 @@
 // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor
 // of .15 (vs .1, 1, 10)
-#define DEFAULT_bedKp 54.66
-#define DEFAULT_bedKi 10.44
-#define DEFAULT_bedKd 190.75
+#define DEFAULT_bedKp 75.52
+#define DEFAULT_bedKi 15.09
+#define DEFAULT_bedKd 251.97
 
 // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC
 // for 8 cycles.
@@ -1813,11 +1813,11 @@
 #define PROBING_MARGIN 10
 
 // X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_FEEDRATE (200 * 60)
+#define XY_PROBE_FEEDRATE (300 * 60)
 
 // Feedrate (mm/min) for the first approach when double-probing
 // (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST (10 * 60)
+#define Z_PROBE_FEEDRATE_FAST (15 * 60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
@@ -1886,7 +1886,7 @@
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
 #define Z_CLEARANCE_DEPLOY_PROBE 10  // (mm) Z Clearance for Deploy/Stow
-#define Z_CLEARANCE_BETWEEN_PROBES 5 // (mm) Z Clearance between probe points
+#define Z_CLEARANCE_BETWEEN_PROBES 3 // (mm) Z Clearance between probe points
 #define Z_CLEARANCE_MULTI_PROBE 5    // (mm) Z Clearance between multiple probes
 #define Z_PROBE_ERROR_TOLERANCE                                                \
   3 // (mm) Tolerance for early trigger (<= -probe.offset.z + ZPET)
